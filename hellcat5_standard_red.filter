@@ -1,6 +1,6 @@
 #Created By: hellcat5
 #creation date: 20161108
-#update date: 20161108
+#update date: 20161202
 #purpose: custom filter for path of exile
 #include: reference.txt
 #
@@ -117,9 +117,12 @@ Show
 	PlayAlertSound 6 200
 
 #Show gem drops - you can add conditions here to cut down on the gems shown
-#Show
-#	Class Gems
-#	SetFontSize 45
+Show
+	Class Gems
+	SetFontSize 45
+	BaseType "Cast while Channelling Support" "Vaal Breach"
+	SetBackgroundColor255 50 50
+	SetBorderColor 255 50 50
 
 #************************
 # divination cards
@@ -572,6 +575,17 @@ Show
 	PlayAlertSound 2 200
 
 #************************
+# breach league
+#************************
+# splinters and blessings
+Show
+	Class Currency
+	BaseType "Splinter of" "Blessing of"
+	SetFontSize 45
+	PlayAlertSound 6 200
+	SetTextColor 181 71 254
+
+#************************
 # special cases
 #************************
 # talisman
@@ -616,7 +630,7 @@ Show
 # add the basetypes you want to search for to the BaseType line below
 # crafting / alching basetypes + build gear - bubblegum background black text
 Show
-	BaseType "Titanium Spirit Shield"
+	BaseType "Breach Ring"
 	SetFontSize 45
 	SetTextColor 0 0 0
 	SetBorderColor 255 180 220
